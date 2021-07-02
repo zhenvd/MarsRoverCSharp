@@ -19,14 +19,14 @@ namespace MarsRoverTests
         public void ConstructorSetsDefaultMode()
         {
             Rover newRover = new Rover(98382);
-            Assert.AreEqual(newRover.Mode, "NORMAL");
+            Assert.AreEqual("NORMAL", newRover.Mode);
         }
 
         [TestMethod]
         public void ConstructorSetsDefaultGeneratorWatts()
         {
             Rover newRover = new Rover(98382);
-            Assert.AreEqual(newRover.GeneratorWatts, 110);
+            Assert.AreEqual(110, newRover.GeneratorWatts);
         }
 
         [TestMethod]
@@ -73,7 +73,7 @@ namespace MarsRoverTests
             }
             catch (ArgumentException x)
             {
-                Assert.AreEqual("Invalid command.", x.Message); //expected 100, actual 100
+                Assert.AreEqual("Invalid command.", x.Message); 
             }
         }
 
