@@ -29,5 +29,15 @@ namespace MarsRover
             NewPostion = value;
         }
 
+        public Command(string commandType, string value)
+        {
+            CommandType = commandType;
+            if (String.IsNullOrEmpty(commandType))
+            {
+                throw new ArgumentNullException(commandType, "Command type required.");
+            }
+            NewMode = value;
+        }
+
     }
 }
